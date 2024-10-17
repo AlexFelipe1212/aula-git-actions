@@ -22,7 +22,7 @@ jobs:
       - name: Configurar o GitPages
         uses: actions/configure-pages@v5
       - name: Fazer upload dos arquivos no GitPages
-        uses: actions/upload-pages-artifacts@v3
+        uses: actions/upload-pages-artifact@v3
       - name: Implantar
         uses: actions/deploy-pages@v4
         
