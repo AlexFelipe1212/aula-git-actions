@@ -24,6 +24,12 @@ jobs:
         uses: actions/checkout@v4
       - name: Configurar o GitPages
         uses: actions/configure-pages@v5
+      - name: Verificação Estática
+        uses: SonarSource/sonarcloud-github-action@v2
+        with: 
+          projectBaseDir: .
+        env:  
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       - name: Fazer upload dos arquivos no GitPages
         uses: actions/upload-pages-artifact@v3
         with: 
